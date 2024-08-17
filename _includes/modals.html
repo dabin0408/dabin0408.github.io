@@ -1,5 +1,10 @@
 <!-- Portfolio Modals -->
 {% for post in site.posts %}
+<head>
+  <!-- Font Awesome CSS 추가 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
@@ -16,26 +21,33 @@
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
-            {% endif %}
+
             <ul class="list-inline item-details">
-              {% if post.client %}
-              <li>Client:
-                <strong>{{ post.client }}</strong>
-              </li>
-              {% endif %}
               {% if post.project-date %}
               <li>Date:
                 <strong>{{ post.project-date }}</strong>
               </li>
               {% endif %}
-              {% if post.category %}
-              <li>Service:
-                <strong>{{ post.category }}</strong>
+              {% if post.animator %}
+              <li>Animator:
+                <strong>{{ post.animator }}</strong>
               </li>
               {% endif %}
             </ul>
+
+            {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% endif %}
+
+            <div class="video-banner">
+              <video autoplay muted loop id="banner-video">
+                <source src="video/portfolio/{{ post.video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <button id="fullscreen-btn" class="btn btn-primary">
+                <i class="fas fa-expand"></i> 
+              </button>
+            </div>
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>
@@ -45,3 +57,79 @@
   </div>
 </div>
 {% endfor %}
+
+<style>
+  .video-banner {
+    width: 100%;
+    height: auto;
+    position: relative; /* 비디오와 버튼을 함께 포함할 컨테이너를 상대적으로 위치 */
+    display: inline-block; /* 컨텐츠에 맞춰 컨테이너 크기 조정 */
+  }
+
+  #banner-video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    #banner-video {
+      max-height: 300px;
+    }
+  }
+
+  #fullscreen-btn {
+  position: absolute;
+  bottom: 10px; /* 비디오 하단에서 10px 위에 위치 */
+  right: 10px; /* 비디오 오른쪽에서 10px 왼쪽에 위치 */
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경색 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+
+  #fullscreen-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 버튼에 마우스를 올렸을 때 배경색 변경 */
+  }
+
+  #banner-video:fullscreen,
+  #banner-video:-webkit-full-screen, /* Safari/Chrome */
+  #banner-video:-moz-full-screen, /* Firefox */
+  #banner-video:-ms-fullscreen { /* IE/Edge */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<script>
+  document.getElementById('fullscreen-btn').addEventListener('click', function() {
+    var video = document.getElementById('banner-video');
+
+    if (!document.fullscreenElement) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) { // Firefox
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) { // IE/Edge
+        video.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) { // Firefox
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { // IE/Edge
+        document.msExitFullscreen();
+      }
+    }
+  });
+</script>
+  
