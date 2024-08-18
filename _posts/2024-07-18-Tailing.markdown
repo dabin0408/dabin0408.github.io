@@ -5,7 +5,7 @@ date: 2024-07-18
 img: tailing.png
 video: tailing.mp4
 alt: 미행
-project-date: April 2024
+project-date: August 2024
 animator: Dabin Lee
 description: (남자친구의 바람을 목격하고 미행을 시작하는데...) Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
