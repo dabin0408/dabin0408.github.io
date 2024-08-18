@@ -23,3 +23,30 @@
     </div>
   </div>
 </section>
+
+<style>
+  .portfolio-flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* 필요에 따라 조정 */
+    flex: 1 1 30%; /* 각 항목의 너비를 30%로 설정 */
+    margin: 15px; /* 항목 간 간격 추가 */
+    max-width: 30%;
+    box-sizing: border-box;
+  }
+
+  .img-responsive {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .portfolio-flex-row {
+    display: flex;
+    flex-wrap: wrap; /* 항목들이 자동으로 다음 행으로 이동 */
+    justify-content: space-around; /* 항목들 사이의 공간 균등 배치 */
+  }
+</style>
