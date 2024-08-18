@@ -31,6 +31,7 @@ color:
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: DA858E #FD6E8A
   secondary-dark: CA757E #A2122F
+  third: 433832
   font: 433832
   font-rgb: "218,133,142"
 
