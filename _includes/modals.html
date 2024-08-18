@@ -40,18 +40,10 @@
             {% endif %}
 
             <div class="video-banner">
-              <video muted loop id="banner-video">
+              <video controls id="banner-video">
                 <source src="video/portfolio/{{ post.video }}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <div class="video-controls">
-                <button id="play-btn" class="btn btn-primary">
-                  <i id="play-icon" class="fas fa-play"></i> 
-                </button>
-                <button id="fullscreen-btn" class="btn btn-primary">
-                  <i class="fas fa-expand"></i> 
-                </button>
-              </div>
             </div>
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
@@ -82,112 +74,5 @@
       max-height: 300px;
     }
   }
-
-  /* 비디오 하단에 컨트롤 바 추가 */
-  .video-controls {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* 왼쪽에 플레이 버튼, 오른쪽에 풀스크린 버튼 배치 */
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* 투명한 배경색 */
-    padding: 5px;
-  }
-
-  .video-controls .btn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  .video-controls .btn:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* 버튼에 마우스를 올렸을 때 배경색 변경 */
-  }
-
-  .video-controls .btn i {
-    font-size: 18px; /* 아이콘 크기 */
-  }
-  #fullscreen-btn {
-  position: absolute;
-  bottom: 10px; /* 비디오 하단에서 10px 위에 위치 */
-  right: 10px; /* 비디오 오른쪽에서 10px 왼쪽에 위치 */
-  z-index: 1000;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경색 */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  }
-
-  #fullscreen-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* 버튼에 마우스를 올렸을 때 배경색 변경 */
-  }
-
-  #banner-video:fullscreen,
-  #banner-video:-webkit-full-screen, /* Safari/Chrome */
-  #banner-video:-moz-full-screen, /* Firefox */
-  #banner-video:-ms-fullscreen { /* IE/Edge */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 </style>
-
-<script>
-  var video = document.getElementById('banner-video');
-  var playButton = document.getElementById('play-btn');
-  var playIcon = document.getElementById('play-icon');
-  var fullscreenButton = document.getElementById('fullscreen-btn');
-
-  // 초기 상태 설정: 비디오가 일시 정지 또는 처음 상태일 때 play 아이콘 표시
-  playIcon.classList.add('fa-play');
-
-  // Play/Pause 버튼 클릭 시 비디오 재생 및 아이콘 변경
-  playButton.addEventListener('click', function() {
-    if (video.paused) {
-      video.play();
-      playIcon.classList.remove('fa-play');
-      playIcon.classList.add('fa-pause');
-    } else {
-      video.pause();
-      playIcon.classList.remove('fa-pause');
-      playIcon.classList.add('fa-play');
-    }
-  });
-
-  // 비디오 종료 시 아이콘을 Play로 되돌림
-  video.addEventListener('ended', function() {
-    playIcon.classList.remove('fa-pause');
-    playIcon.classList.add('fa-play');
-  });
-
-  // Fullscreen 버튼 클릭 시 풀스크린 활성화
-  fullscreenButton.addEventListener('click', function() {
-    if (!document.fullscreenElement) {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.mozRequestFullScreen) { // Firefox
-        video.mozRequestFullScreen();
-      } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        video.webkitRequestFullscreen();
-      } else if (video.msRequestFullscreen) { // IE/Edge
-        video.msRequestFullscreen();
-      }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) { // Firefox
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) { // IE/Edge
-        document.msExitFullscreen();
-      }
-    }
-  });
-</script>
   
