@@ -254,7 +254,7 @@ section.success {
 
 /* Flexbox Portfolio Grid */
 @media (min-width: 640px) {
-    .portfolio-flex-grid .portfolio-flex-row {
+    /* .portfolio-flex-grid .portfolio-flex-row {
       display: flex;
       flex-flow: row wrap;
       align-items: stretch;
@@ -263,8 +263,34 @@ section.success {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 49%;
       max-width: 49%;
+    } */
+
+    .portfolio-flex-grid .portfolio-flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content: flex-start; /* 항목들을 왼쪽부터 정렬 */
+        gap: 20px; /* 아이템 사이의 간격 추가 */
     }
-  }
+
+    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+        flex: 1 0 48%; /* 각 항목의 너비를 설정 (간격을 고려하여 48%) */
+        max-width: 48%;
+    }
+
+    /* 2번째 아이템을 가운데로 배치 */
+    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto; /* 가운데 정렬을 위해 좌우 자동 마진 사용 */
+    }
+
+    /* 기타 항목들 */
+    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
   @media (min-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 32%;
