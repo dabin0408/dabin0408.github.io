@@ -73,4 +73,20 @@
     }
   }
 </style>
-  
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const closeButtons = document.querySelectorAll('[data-dismiss="modal"]');
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const modal = button.closest('.portfolio-modal');
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  });
+});
+</script>
