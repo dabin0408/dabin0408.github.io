@@ -7,6 +7,6 @@ video: tailing.mp4
 alt: tailing
 project-date: August 2024
 animator: Dabin Lee
-description: (남자친구의 바람을 목격하고 미행을 시작하는데...) Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: 똑부러져 보이지만 천진난만한 20대 소녀가 수상한 사람을 발견하고 미행을 시작합니다. '이런 건 영화에서만 본 줄 알았는데!' 신이 난 소녀는 처음 해보는 미행에 어설프지만 의욕이 넘칩니다. 그 사람이 점점 멀어지자 소녀는 전봇대를 발견하고 기어오르기 시작하지만 덤벙대는 성격 탓에 올라가다 결국 떨어지고 맙니다. 소녀의 요란한 추락 소리에 수상한 사람이 뒤를 돌아보자, 소녀는 제발 저린 듯 황급히 도망칩니다.
 ---
 
