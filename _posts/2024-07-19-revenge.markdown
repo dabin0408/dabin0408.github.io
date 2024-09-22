@@ -7,6 +7,6 @@ video: revenge.mp4
 alt: revenge
 project-date: August 2024
 animator: Dabin Lee
-description: "I took your stuff. How's that make you feel? Do you feel bad? Good, because that's how I feel!" 주인공은 눈에는 눈, 이에는 이! 자신이 아끼던 물건을 뺏어간 집주인에게 복수할 완벽한 기회를 노리고 있었습니다. 주인공은 집주인의 소중한 물건을 훔쳐 들고, 집주인을 찾아가 조롱하며 말합니다. "내가 네 물건을 훔쳤어. 기분이 어때? 기분 나빠? 잘됐네, 그게 내가 느낀 기분이거든!" 그러고 나서 주인공은 그 물건을 쓰레기통에 던져버립니다. 자신의 물건이 버려지는 걸 본 집주인은 화가 나서 문을 쾅 닫아버립니다. 이 장면은 주인공의 분노와 상처를 드러내면서도, 귀여우면서 코믹한 분위기로 그려냅니다.
+description: "I took your stuff. How's that make you feel? Do you feel bad? Good, because that's how I feel!" 
 ---
 
