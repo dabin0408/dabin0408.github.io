@@ -7,6 +7,6 @@ video: revenge.mp4
 alt: revenge
 project-date: August 2024
 animator: Dabin Lee
-description: "I took your stuff. How's that make you feel? Do you feel bad? Good, because that's how I feel!" 
+description: \"I took your stuff. How's that make you feel? Do you feel bad? Good, because that's how I feel!\" 
 ---
 
