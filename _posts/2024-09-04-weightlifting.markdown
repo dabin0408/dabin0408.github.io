@@ -7,5 +7,5 @@ video: weightlifting.mp4
 alt: weightlifting
 project-date: September 2024
 animator: Dabin Lee
-description:
+description: "                                                                                                                                                 "
 ---
