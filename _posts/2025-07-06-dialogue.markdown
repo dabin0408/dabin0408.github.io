@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 1
+date: 2025-07-06
+img: dialogue.png
+video: dialogue.mp4
+alt: dialogue
+project-date: July 2025
+animator: Dabin Lee
+description: "..."
+---
+
